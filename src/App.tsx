@@ -1,26 +1,11 @@
 import { MouseEvent, useState } from "react";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
-import { createBrowserRouter } from "react-router-dom";
+import { Link, createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import { Menu } from "./pages/Menu/Menu";
-import { Cart } from "./pages/Cart/Cart";
-import { Error } from "./pages/Error/Error";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Menu />,
-  },
-  {
-    path: "/cart",
-    element: <Cart />,
-  },
-  {
-    path: "*",
-    element: <Error />,
-  },
-]);
+
+
 
 function App() {
   const [counter, setCounter] = useState<number>();
@@ -41,11 +26,8 @@ function App() {
         Button
       </Button>
       <Input placeholder="E-mail"></Input>
-      <div>
-        <a href="/">Menu</a>
-        <a href="/cart">Cart</a>
-      </div>
-      <RouterProvider router={router} />
+      
+      
     </div>
   );
 }
