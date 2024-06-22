@@ -20,13 +20,14 @@ import classNames from "classnames";
 //   );
 // };
 
-const Button = ({ children, appearence = 'small', ...props }: ButtonProps) => {
+const Button = ({ children, className, appearence = 'small', ...props }: ButtonProps) => {
   return (
     <button
       {...props}
       className={classNames(
+				className,
         [
-          "ease-in-out duration-300 bg-primary-default text-base rounded-full text-white  hover:bg-primary-dark",
+          "ease-in-out duration-300 bg-primary-default text-base rounded-full text-white flex gap-2 justify-center hover:bg-primary-dark",
         ],
         {
           ["normal-case px-9 py-2.5 font-normal"]: appearence === "small",
