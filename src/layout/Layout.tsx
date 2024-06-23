@@ -1,6 +1,5 @@
-import { Link, Outlet, useLocation, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { useEffect } from "react";
 import classNames from "classnames";
 
 export function Layout() {
@@ -54,7 +53,7 @@ export function Layout() {
         </Button>
       </div>
 
-      <div>
+      <div className="p-14 w-full">
         <Outlet />
       </div>
     </div>
