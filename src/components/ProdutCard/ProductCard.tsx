@@ -2,7 +2,7 @@ import { ProductCardProps } from "./ProductCard.props";
 import { Link } from "react-router-dom";
 const ProductCard = (props: ProductCardProps) => {
   return (
-    <Link to={'./'}>
+    <Link to={`/product/${props.id}`}>
       <div className="bg-white rounded-2xl drop-shadow-md w-80">
         <div
           className="relative rounded-2xl  min-h-40"
